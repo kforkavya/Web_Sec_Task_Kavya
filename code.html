@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Database System</title>
+    <link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+integrity="sha384-OgVRvuATP1z7JjHLkuOUzXw704+V9ZuSlg7+O8E6Iip0wXw7T1qUt6s7nI6k0n4" 
+crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Database System</h1>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#add-patient">Add 
+Patient</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#view-patients">View 
+Patients</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="add-patient">
+                <h2>Add Patient Details</h2>
+<form action="add_patient.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" 
+name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" class="form-control" id="dob" 
+name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="medical_details">Medical 
+Details:</label>
+                        <textarea class="form-control" 
+id="medical_details" name="medical_details" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea class="form-control" id="address" 
+name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_details">Contact 
+Details:</label>
+                        <textarea class="form-control" 
+id="contact_details" name="contact_details" rows="3" required></textarea>
+                    </div>
+           <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="view-patients">
+                <h2>View Patients</h2>
+<?php
+include('view_patients.php');
+?>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+crossorigin="anonymous"></script>
+    <script 
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper">
+    </script>
+    <script 
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+integrity="sha384-OgVRvuATP1z7JjHLkuOUzXw704+V9ZuSlg7+O8E6Iip0wXw7T1qUt6s7nI6k0n4" 
+crossorigin="anonymous"></script>
+</body>
+</html>
